@@ -29,9 +29,9 @@ function splitText() {
     }
 
     result.forEach(textSnippet => {
-        let threadPart = document.createElement(textarea);
+        let threadPart = document.createElement("textarea");
         threadPart.value = textSnippet;
-        document.querySelector("body").append(threadPart);
+        document.body.append(threadPart);
     });
     
     console.log(result); // Ausgabe des Ergebnis-Arrays in der Konsole    
