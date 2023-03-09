@@ -2,7 +2,7 @@ const sendButton = document.querySelector("#split-button");
 sendButton.addEventListener("click", splitText);
 
 function splitText() {
-    let input = document.querySelector("#text-input").innerText;
+    let input = document.querySelector("#text-input").value;
     let sentences = input.split(". "); // Satztrennung durchführen
 
     let maxLength = 500; // Maximale Länge eines Elements im Array
