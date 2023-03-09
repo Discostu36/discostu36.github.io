@@ -29,7 +29,7 @@ function splitText() {
     }
 
     result.forEach(textSnippet => {
-        let threadPart = document.createElement(textArea);
+        let threadPart = document.createElement(textarea);
         threadPart.value = textSnippet;
         document.querySelector("body").append(threadPart);
     });
