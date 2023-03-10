@@ -3,7 +3,7 @@ sendButton.addEventListener("click", splitText);
 
 function splitText() {
     let input = document.querySelector("#text-input").value;
-    const splitRegEx = /(\. )|(\? )|(! )|(\." )|(\.“ )|(\.« )|(\.» )|(: )/g;
+    const splitRegEx = /(\. |\? |! |\." |\.“ |\.« |\.» |: )/g;
     // unvollständig
     let sentences = input.split(splitRegEx); // Satztrennung durchführen
 
