@@ -2,6 +2,7 @@ const sendButton = document.querySelector("#split-button");
 sendButton.addEventListener("click", splitText);
 
 function splitText() {
+document.querySelector("#result").innerHTML = "";
     let input = document.querySelector("#text-input").value;
     const splitRegEx = /(\.\s|\?\s|!\s|\."\s|\.“\s|\.«\s|\.»\s|:\s)/g;
     // unvollständig
@@ -30,12 +31,11 @@ function splitText() {
         result.push(currentChunk.trim());
     }
 
-document.querySelector("#debug").innerHTML = sentences;
     result.forEach(textSnippet => {
         let threadPart = document.createElement("textarea");
         threadPart.value = textSnippet;
         threadPart.rows = 15;
         threadPart.cols = 40;
-        document.body.append(threadPart);
+        document.querySelector("#result").append(threadPart);
     });
 }
