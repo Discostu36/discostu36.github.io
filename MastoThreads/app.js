@@ -30,7 +30,7 @@ function splitText() {
         result.push(currentChunk.trim());
     }
 
-document.querySelector("#debug").innerText = result;
+document.querySelector("#debug").innerHTML = sentences;
     result.forEach(textSnippet => {
         let threadPart = document.createElement("textarea");
         threadPart.value = textSnippet;
