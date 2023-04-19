@@ -4,7 +4,7 @@ sendButton.addEventListener("click", splitText);
 function splitText() {
 document.querySelector("#result").innerHTML = "";
     let input = document.querySelector("#text-input").value;
-    const splitRegEx = /(\.\s|\?\s|!\s|\."\s|\.“\s|\.«\s|\.»\s|:\s)/g;
+    const splitRegEx = /(?<=(\.\s|\?\s|!\s|\."|\.“|\.«|\.»|:\s))/g;
     // unvollständig
     let sentences = input.split(splitRegEx); // Satztrennung durchführen
 
