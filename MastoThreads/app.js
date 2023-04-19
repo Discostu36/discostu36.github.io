@@ -23,7 +23,7 @@ document.querySelector("#result").innerHTML = "";
         }
 
         // Füge den aktuellen Satz zum Chunk hinzu
-        currentChunk += sentence + ". ";
+        currentChunk += sentence;
     }
 
     // Füge den letzten Chunk zum Ergebnis-Array hinzu
