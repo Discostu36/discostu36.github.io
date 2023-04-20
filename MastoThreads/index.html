@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MastoThreads</title>
+    <title>MastoThreads - Automatically create threads for Mastodon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="main">
-        <label for="text-input">Enter text for the thread:</label><br>
-        <textarea autofocus id="text-input" type="text" name="text-input" rows="30" cols="40" placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu."></textarea><br>
+<body>
+    <div id="head">
+        <h1>Mastothreads - Automatically create threads for Mastodon</h1>
+    </div>
+    <div id="main">
+        <label for="text-input"><p id="input-label">Enter the text you want so split into Mastodon posts.</p></label>
+        <textarea autofocus id="text-input" type="text" name="text-input" rows="30" cols="40"
+            placeholder="Enter your text here" autocorrect="on"></textarea><br>
         <button id="split-button">Create thread</button>
     </div>
-<div id="result"></div>
-    
+    <div id="result">
+        <h2>Thread posts</h2>
+        <div id="results-grid">
+
+        </div>
+
+
+    </div>
+
+
     <script src="app.js"></script>
 </body>
+
 </html>

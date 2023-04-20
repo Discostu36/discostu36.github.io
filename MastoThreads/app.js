@@ -2,7 +2,9 @@ const sendButton = document.querySelector("#split-button");
 sendButton.addEventListener("click", splitText);
 
 function splitText() {
-document.querySelector("#result").innerHTML = "";
+    document.querySelector("#result>h2").style.display = "block";
+    document.querySelector("#result").scrollIntoView({ behavior: "smooth"});
+    document.querySelector("#results-grid").innerHTML = "";
     let input = document.querySelector("#text-input").value;
     const splitRegEx = /(?<=\.\s|\?\s|!\s|\."|\.“|\.«|\.»|:\s)/g;
     // unvollständig
@@ -36,6 +38,6 @@ document.querySelector("#result").innerHTML = "";
         threadPart.value = textSnippet;
         threadPart.rows = 15;
         threadPart.cols = 40;
-        document.querySelector("#result").append(threadPart);
+        document.querySelector("#results-grid").append(threadPart);
     });
 }
