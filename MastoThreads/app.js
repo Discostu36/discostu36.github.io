@@ -41,3 +41,11 @@ function splitText() {
         document.querySelector("#results-grid").append(threadPart);
     });
 }
+/* To Do:
+- Fix numbered lists
+- Show number of characters
+- Thread counter
+- Copy button
+- Toggle char limit
+- Resize text area for content https://stackoverflow.com/questions/2803880/is-there-a-way-to-get-a-textarea-to-stretch-to-fit-its-content-without-using-php
+ */
