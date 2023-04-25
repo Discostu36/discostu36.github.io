@@ -2,15 +2,15 @@ const sendButton = document.querySelector("#split-button");
 sendButton.addEventListener("click", splitText);
 
 function splitText() {
-    document.querySelector("#result>h2").style.display = "block";
+   var charLimit = 500; document.querySelector("#result>h2").style.display = "block";
     document.querySelector("#result").scrollIntoView({ behavior: "smooth"});
     document.querySelector("#results-grid").innerHTML = "";
     let input = document.querySelector("#text-input").value;
-    const splitRegEx = /(?<=\.\s|\?\s|!\s|\."|\.“|\.«|\.»|:\s)/g;
-    // unvollständig
-    let sentences = input.split(splitRegEx); // Satztrennung durchführen
+    const splitRegEx = /(?<=\D\.\s|.\?\s|.!\s|\."\s|\.“\s|\.«\s|\.»\s|!"\s|!“\s|!«\s|.!»|\?"\s|\?“\s|\?«\s|\?»\s|.:\s|..\n)/g;
+    // should be extended
+    let sentences = input.split(splitRegEx); // Split input
 
-    let maxLength = 500; // Maximale Länge eines Elements im Array
+    let maxLength = charLimit - 5; // Reserve space for thread count
     let result = [];
 
     let currentChunk = "";
@@ -42,7 +42,6 @@ function splitText() {
     });
 }
 /* To Do:
-- Fix numbered lists
 - Show number of characters
 - Thread counter
 - Copy button
