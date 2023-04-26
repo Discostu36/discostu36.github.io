@@ -10,7 +10,7 @@ function splitText() {
     // should be extended
     let sentences = input.split(splitRegEx); // Split input
 
-    let maxLength = charLimit - 5; // Reserve space for thread count
+    let maxLength = charLimit - 7; // Reserve space for thread count
     let result = [];
 
     let currentChunk = "";
@@ -45,7 +45,6 @@ let counter = index + 1;
 }
 /* To Do:
 - Show number of characters
-- Thread counter
 - Copy button
 - Toggle char limit
 - Resize text area for content https://stackoverflow.com/questions/2803880/is-there-a-way-to-get-a-textarea-to-stretch-to-fit-its-content-without-using-php
