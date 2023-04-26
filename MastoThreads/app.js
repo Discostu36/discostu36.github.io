@@ -34,7 +34,8 @@ function splitText() {
     }
 
     result.forEach((textSnippet, index, array) => {
-        let threadCount = index + "/" + array.length;
+let counter = index + 1;
+        let threadCount = counter + "/" + array.length;
         let threadPart = document.createElement("textarea");
         threadPart.value = textSnippet + "\n\n" + threadCount;
         threadPart.rows = 15;
