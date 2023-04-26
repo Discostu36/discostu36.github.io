@@ -33,9 +33,10 @@ function splitText() {
         result.push(currentChunk.trim());
     }
 
-    result.forEach(textSnippet => {
+    result.forEach((textSnippet, index, array) => {
+        let threadCount = index + "/" + array.length;
         let threadPart = document.createElement("textarea");
-        threadPart.value = textSnippet;
+        threadPart.value = textSnippet + "\n\n" + threadCount;
         threadPart.rows = 15;
         threadPart.cols = 40;
         document.querySelector("#results-grid").append(threadPart);
