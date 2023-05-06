@@ -1,55 +1,60 @@
 body {
-    font-size:15px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:#191b22;
-    color:white;
+    background-color: #191b22;
+    color: white;
     scroll-behavior: smooth;
 }
 
 div#main {
-    width: min(700px,90vw);
-    margin:auto;
+    width: min(700px, 90vw);
+    margin: auto;
 }
 
 textarea {
-    background-color:rgb(255, 255, 255);
-    color:rgb(40, 44, 55);
-    font-size:14px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(40, 44, 55);
+    font-size: 14px;
     width: 100%;
 }
 
 #results-grid>textarea {
-    width:max(25%, 300px);
+    width: max(25%, 300px);
     margin: 25px;
 }
 
 #input-label {
-    text-align:center;
+    text-align: center;
+}
+
+.character-counter {
+    padding-left:2px;
+    margin-top:5px
 }
 
 h1 {
-    text-align:center;
-    margin-bottom:50px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 button#split-button {
-    background-color:purple;
-    color:rgb(255, 255, 255);
+    background-color: purple;
+    color: rgb(255, 255, 255);
     padding: 10px;
-    font-size:15px;
-    margin-top:10px;
-    width:150px;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 150px;
     border-radius: 5px;
-    border:none;
+    border: none;
     margin-left: calc(50% - 75px);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #result {
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 #result>h2 {
-    display:none;
-    text-align:center;
+    display: none;
+    text-align: center;
 }
