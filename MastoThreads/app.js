@@ -1,6 +1,12 @@
+// count characters on input
+document.querySelector("#text-input").addEventListener('change', function() {
+    document.querySelector("#input-container .character-counter").innerText = document.querySelector("#text-input").value.length
+})
+
 const sendButton = document.querySelector("#split-button");
 sendButton.addEventListener("click", splitText);
 
+// split text into posts
 function splitText() {
    var charLimit = 500; document.querySelector("#result>h2").style.display = "block";
     document.querySelector("#result").scrollIntoView({ behavior: "smooth"});
