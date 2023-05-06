@@ -1,6 +1,11 @@
+"use strict";
 // count characters on input
-document.querySelector("#text-input").addEventListener('change', function() {
-    document.querySelector("#input-container .character-counter").innerText = document.querySelector("#text-input").value.length
+var charLimit = 500; 
+const textInput = document.querySelector("#text-input");
+const characterCounter = document.querySelector("#input-container .character-counter");
+characterCounter.innerText = `${textInput.value.length}/${charLimit}`
+textInput.addEventListener('input', function () {
+    characterCounter.innerText = `${textInput.value.length}/${charLimit}`;
 })
 
 const sendButton = document.querySelector("#split-button");
@@ -8,8 +13,8 @@ sendButton.addEventListener("click", splitText);
 
 // split text into posts
 function splitText() {
-   var charLimit = 500; document.querySelector("#result>h2").style.display = "block";
-    document.querySelector("#result").scrollIntoView({ behavior: "smooth"});
+    document.querySelector("#result>h2").style.display = "block";
+    document.querySelector("#result").scrollIntoView({ behavior: "smooth" });
     document.querySelector("#results-grid").innerHTML = "";
     let input = document.querySelector("#text-input").value;
     const splitRegEx = /(?<=\D\.\s|.\?\s|.!\s|\."\s|\.“\s|\.«\s|\.»\s|!"\s|!“\s|!«\s|.!»|\?"\s|\?“\s|\?«\s|\?»\s|.:\s|..\n)/g;
@@ -40,7 +45,7 @@ function splitText() {
     }
 
     result.forEach((textSnippet, index, array) => {
-let counter = index + 1;
+        let counter = index + 1;
         let threadCount = counter + "/" + array.length;
         let threadPart = document.createElement("textarea");
         threadPart.value = textSnippet + "\n\n" + threadCount;
