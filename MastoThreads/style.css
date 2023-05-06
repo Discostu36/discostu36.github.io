@@ -22,9 +22,18 @@ textarea {
     width:max(25%, 300px);
     margin: 25px;
 }
+#input-container {
+    position:relative;
+}
 
 #input-label {
     text-align:center;
+}
+
+.character-counter {
+    position:absolute;
+    left:0;
+    bottom:0;
 }
 
 h1 {
