@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (totalMinutes !== null) {
             resultDiv.innerHTML = `
-                <p><strong>Total Time:</strong> ${formatTime(totalMinutes)}</p>
+                <p><strong>Total Time:</strong> ${formatTime(totalMinutes)} h</p>
                 <p><strong>In Minutes:</strong> ${totalMinutes} min</p>
                 <p><strong>In Hours:</strong> ${(totalMinutes / 60).toFixed(2)} h</p>
             `;
@@ -42,7 +42,7 @@ function parseTime(timeStr) {
 }
 
 function formatTime(totalMinutes) {
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
-    return `${hours}:${minutes} h`;
+    const hours = String(Math.floor(totalMinutes / 60)).padStart(2, '0');
+    const minutes = String(totalMinutes % 60).padStart(2, '0');
+    return `${hours}:${minutes}`;
 }
