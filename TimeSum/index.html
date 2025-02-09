@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSum - Automatically get the sum of a list of time spans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="head">
+        <h1>TimeSum - Automatically get the sum of a list of time spans</h1>
+    </div>
+    <div id="main">
+        <label for="text-input">
+            <p id="input-label">Enter the time spans that you want to add up.</p>
+        </label>
+        <div id="input-container">
+            <textarea autofocus id="text-input" type="text" name="text-input" rows="10" cols="40"
+                placeholder="12:00-13:00, 14:45-15:15" autocorrect="on"></textarea>
+        </div>
+        <br>
+        <button id="add-button">Add times</button>
+        <div id="result">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
